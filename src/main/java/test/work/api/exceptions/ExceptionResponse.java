@@ -14,7 +14,7 @@ public class ExceptionResponse {
     private final String path;
     private Collection<String> constraintViolations;
 
-    ExceptionResponse(String message, WebRequest request) {
+    public ExceptionResponse(String message, WebRequest request) {
         this.timestamp = LocalDateTime.now();
         this.message = message;
         this.path = request.getDescription(false);
